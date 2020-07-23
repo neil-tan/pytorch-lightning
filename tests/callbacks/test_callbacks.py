@@ -1,3 +1,4 @@
+import pickle
 from pathlib import Path
 
 import pytest
@@ -291,7 +292,6 @@ def test_early_stopping_no_val_step(tmpdir):
 
 
 def test_pickling(tmpdir):
-    import pickle
     early_stopping = EarlyStopping()
     ckpt = ModelCheckpoint(tmpdir)
 
